@@ -1,0 +1,22 @@
+{
+    "name": "test ext",
+    "version": "1.0",
+    "description": "Build an Extension!",
+    "manifest_version": 3,
+    "host_permissions": [
+        "https://www.instagram.com/*"
+    ],
+    "content_scripts": [
+        {
+            "js": [
+                "index.js"
+            ],
+            "css": [
+                "main.css"
+            ],
+            "matches": [
+                "https://www.instagram.com/*"
+            ]
+        }
+    ]
+}
