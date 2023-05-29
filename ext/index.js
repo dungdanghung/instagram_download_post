@@ -1,4 +1,5 @@
 
+
 const POST_REGEX = /\/(p|tv|reel|reels)\/([A-Za-z0-9_-]*)(\/?)/
 const docID = "9419181298154937"
 let token = document.querySelectorAll('script[type="application/json"]')
@@ -28,10 +29,11 @@ const body = document.querySelector("body")
 const callback = (mutationList, observe) => {
     if (check && window.location.pathname.match(POST_REGEX)) {
         clearTimeout(timeout)
-        const b = document.querySelector("._aatk")
+        const b = document.querySelector("._aatk._aatl")
         const c = document.querySelector(".x1iyjqo2.x1tjbqro.x78zum5.x6s0dn4.xeud2gj")
         if (b && !document.querySelector("#downloadimage")) {
             check = false
+         
             b.appendChild(itemDOM2)
             timeout = setTimeout(() => {
                 check = true
@@ -67,6 +69,7 @@ function getdata(type) {
             }).then((rs) => {
                 if (rs.data.xdt_api__v1__media__shortcode__web_info.items[0].carousel_media) {
                     let indeximage = 0
+     
                     const itemindex = type === "home" ? Array.from(e.target.parentElement.children[0].children[1].children) : Array.from(document.querySelectorAll("._aamj._acvz._acnc._acng"))
                     if (itemindex) {
                         itemindex.every((item, index) => {
